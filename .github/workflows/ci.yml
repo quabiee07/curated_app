@@ -1,7 +1,6 @@
-# This workflow uses actions that are not certified by GitHub.
-# They are provided by a third-party and are governed by
-# separate terms of service, privacy policy, and support
-# documentation.
+# This workflow triggers on pushes to the main branch.
+# It sets up the Flutter environment and builds the web application.
+
 
 name: Dart
 
