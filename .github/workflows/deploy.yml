@@ -36,8 +36,8 @@ jobs:
       - name: Deploy to Namecheap
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
         with:
-          server: ${{ secrets.GITHUB_TOKEN.FTP_SERVER }} # The FTP server address
-          username: ${{ secrets.GITHUB_TOKEN.FTP_USERNAME }}
+          server: ftp.curated.forum
+          username: quabiee-deployer@curated.forum
           password: ${{ secrets.GITHUB_TOKEN.FTP_PASSWORD }}
           local-dir: ./build/web/ # The directory of files to upload
           server-dir: ./public_html/ # The destination directory on the server
