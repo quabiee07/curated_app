@@ -38,6 +38,6 @@ jobs:
         with:
           server: ftp.curated.forum
           username: quabiee-deployer@curated.forum
-          password: secrets.GITHUB_TOKEN.FTP_PASSWORD
+          password: curatedFxrxm001#
           local-dir: ./build/web/ # The directory of files to upload
           server-dir: ./public_html/ # The destination directory on the server
