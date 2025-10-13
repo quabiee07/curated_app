@@ -38,7 +38,7 @@ jobs:
         with:
           server: ftp.curated.forum
           username: quabiee-deployer@curated.forum
-          password: curatedFxrxm001#
+          password: ${{ secrets.NAMECHEAP_FTP_PASSWORD }}
           protocol: ftps
           port: 21
           # local-dir: ./build/web/ # The directory of files to upload

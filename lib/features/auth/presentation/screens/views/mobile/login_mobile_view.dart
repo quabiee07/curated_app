@@ -1,5 +1,6 @@
 import 'package:curated_app/core/presentation/theme/colors/colors.dart';
 import 'package:curated_app/core/presentation/utils/custom_state.dart';
+import 'package:curated_app/core/presentation/utils/navigation_mixin.dart' as nav;
 import 'package:curated_app/core/presentation/utils/snack_bar_utils.dart';
 import 'package:curated_app/core/presentation/widgets/button.dart';
 import 'package:curated_app/core/presentation/widgets/input_field.dart';
@@ -28,7 +29,6 @@ class _LoginMobileViewState extends CustomState<LoginMobileView> {
         context.showError(event);
       } else if (event is AuthModel) {
         context.showSuccess('Welcome back, ${event.user.username}');
-
       }
     });
     super.onStarted();
@@ -44,13 +44,13 @@ class _LoginMobileViewState extends CustomState<LoginMobileView> {
         final state = provider.state;
         return Scaffold(
             body: SafeArea(
-              child: SingleChildScrollView(
-                physics: const BouncingScrollPhysics(),
-                padding: const EdgeInsets.symmetric(
+          child: SingleChildScrollView(
+            physics: const BouncingScrollPhysics(),
+            padding: const EdgeInsets.symmetric(
               vertical: 16,
               horizontal: 24,
-                        ),
-                child: Column(
+            ),
+            child: Column(
               crossAxisAlignment: CrossAxisAlignment.center,
               mainAxisAlignment: MainAxisAlignment.center,
               mainAxisSize: MainAxisSize.min,
@@ -106,6 +106,7 @@ class _LoginMobileViewState extends CustomState<LoginMobileView> {
                             recognizer: TapGestureRecognizer()
                               ..onTap = () {
                                 // Handle Terms of Service tap
+                                // context.push(HomePage() );
                               },
                           ),
                         ],
@@ -116,7 +117,8 @@ class _LoginMobileViewState extends CustomState<LoginMobileView> {
                 const Gap(24),
                 Button(
                   title: 'Login',
-                  isEnabled: state.email.isNotEmpty && state.password.isNotEmpty,
+                  isEnabled:
+                      state.email.isNotEmpty && state.password.isNotEmpty,
                   isLoading: provider.loading,
                   onPressed: () {
                     provider.login();
@@ -144,8 +146,8 @@ class _LoginMobileViewState extends CustomState<LoginMobileView> {
                 ),
               ],
             ),
-              ),
-            ));
+          ),
+        ));
       }),
     );
   }
