@@ -65,7 +65,8 @@ class _RegisterDesktopViewState extends CustomState<RegisterDesktopView> {
               Expanded(
                 child: Container(
                   color: Colors.white,
-                  padding: const EdgeInsets.symmetric(horizontal: 56),
+                  height: screenHeight(context),
+                  padding: const EdgeInsets.symmetric(horizontal: 56, vertical: 24),
                   child: SingleChildScrollView(
                     physics: const BouncingScrollPhysics(),
                     child: Column(

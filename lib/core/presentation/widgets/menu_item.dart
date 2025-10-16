@@ -105,7 +105,7 @@ class MobileMenuItem extends StatelessWidget {
               width: isHovered ? stickWidth : 0,
               height: 3,
               decoration: BoxDecoration(
-                color: Colors.black,
+                color:Colors.white,
                 borderRadius: BorderRadius.circular(5),
               ),
             ),
@@ -121,6 +121,9 @@ class MobileMenuItem extends StatelessWidget {
                 duration: Duration(milliseconds: 100),
                 child: Text(
                   _formatIndex(index + 1),
+                  style: TextStyle(
+                    color: Colors.white
+                  ),
                 ),
               ),
             ),
@@ -132,6 +135,9 @@ class MobileMenuItem extends StatelessWidget {
                 duration: Duration(milliseconds: 100),
                 child: Text(
                   label,
+                 style:  TextStyle(
+                    color: Colors.white
+                  ),
                 ),
               ),
             ),

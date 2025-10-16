@@ -3,7 +3,6 @@ import 'package:curated_app/core/domain/utils/utils.dart';
 import 'package:curated_app/core/presentation/resources/drawables.dart';
 import 'package:curated_app/core/presentation/theme/colors/colors.dart';
 import 'package:curated_app/core/presentation/utils/custom_state.dart';
-import 'package:curated_app/core/presentation/utils/navigation_mixin.dart';
 import 'package:curated_app/core/presentation/utils/snack_bar_utils.dart';
 import 'package:curated_app/core/presentation/widgets/clickable.dart';
 import 'package:curated_app/core/presentation/widgets/svg_image.dart';
@@ -39,8 +38,8 @@ class _PostDesktopViewState extends CustomState<PostDesktopView> {
     _provider?.getPosts();
     _provider?.listen((event) {
       if (event is String) {
+        if(!mounted) return;
         showError(event);
-        context.pop();
       }
     });
     super.onStarted();

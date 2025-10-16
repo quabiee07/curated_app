@@ -1,3 +1,4 @@
+import 'package:curated_app/core/presentation/theme/colors/colors.dart';
 import 'package:curated_app/core/presentation/utils/utils.dart';
 import 'package:curated_app/core/presentation/widgets/menu_item.dart';
 import 'package:flutter/gestures.dart';
@@ -132,12 +133,14 @@ class _MenuPageState extends State<MenuPage> with TickerProviderStateMixin {
     return Container(
       height: MediaQuery.of(context).size.height,
       padding: _padding,
-      color: Colors.white,
+      color: purple,
       child: Center(
         child: Stack(
           alignment: Alignment.center,
           children: [
             Column(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.center,
               children: createMenuItems(context),
             ),
           ],

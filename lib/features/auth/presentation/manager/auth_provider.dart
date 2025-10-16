@@ -22,44 +22,44 @@ class AuthProvider extends CustomProvider {
   }
 
   setEmail(String email) {
-    state.email = email;
+    state.email = email.trim();
     state.emailError = email.validateEmail();
     _validateBasic();
   }
 
   setFirstName(String firstName) {
-    state.firstName = firstName;
+    state.firstName = firstName.trim();
     state.firstNameError = firstName.validateName();
     _validateBasic();
   }
 
   setLastName(String lastName) {
-    state.lastName = lastName;
+    state.lastName = lastName.trim();
     state.lastNameError = lastName.validateName();
     _validateBasic();
   }
 
   setPhone(String phone) {
-    state.phone = phone;
+    state.phone = phone.trim();
     state.phoneError = phone.validatePhone();
     _validateBasic();
   }
 
   setPassword(String password) {
-    state.password = password;
+    state.password = password.trim();
     state.passwordError = password.validatePassword();
     _validateBasic();
   }
 
   setConfirmPassword(String confirmPassword) {
-    state.confirmPassword = confirmPassword;
+    state.confirmPassword = confirmPassword.trim();
     state.confirmPasswordError =
         confirmPassword.validateRePassword(state.password);
     _validateBasic();
   }
 
   setCity(String city) {
-    state.city = city;
+    state.city = city.trim();
     state.cityError = city.validateName();
     _validateBasic();
   }
@@ -73,7 +73,7 @@ class AuthProvider extends CustomProvider {
   }
 
   setUsername(String username) {
-    state.username = username;
+    state.username = username.trim();
     state.usernameError = username.validateName();
     _validateBasic();
   }

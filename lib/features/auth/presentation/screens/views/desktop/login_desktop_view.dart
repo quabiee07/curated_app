@@ -8,7 +8,6 @@ import 'package:curated_app/core/presentation/widgets/svg_image.dart';
 import 'package:curated_app/features/auth/domain/model/auth_model.dart';
 import 'package:curated_app/features/auth/presentation/manager/auth_provider.dart';
 import 'package:curated_app/features/auth/presentation/screens/register.dart';
-import 'package:curated_app/features/home/presentation/screens/home.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';

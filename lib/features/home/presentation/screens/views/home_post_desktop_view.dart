@@ -47,8 +47,10 @@ class _HomePostDesktopViewState extends CustomState<HomePostDesktopView> {
     _profileProvider?.getUser();
     _provider?.listen((event) {
       if (event is String) {
+        if (!mounted) return;
         showError(event);
       } else if (event is CreatedPost) {
+        if (!mounted) return;
         toggleCreatePost();
         showSuccess('Post created successfully');
         _provider?.getHomePagePosts();

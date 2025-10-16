@@ -12,12 +12,12 @@ class HomeRepositoryImpl extends HomeRepository {
 
   @override
   Future<ApiResult<HomePostData>> getHomePagePosts() async {
-    // try {
+    try {
       final result = await api.getHomePagePosts(
           token: accessToken, );
       return ApiResult.success(result.data.toDto());
-    // } catch (e) {
-    //   return ApiResult.failure(e);
-    // }
+    } catch (e) {
+      return ApiResult.failure(e);
+    }
   }
 }

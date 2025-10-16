@@ -1,4 +1,7 @@
+import 'package:curated_app/core/presentation/theme/colors/colors.dart';
+import 'package:curated_app/core/presentation/utils/routes.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 class ProfileMobileView extends StatefulWidget {
   const ProfileMobileView({super.key});
@@ -12,11 +15,16 @@ class _ProfileMobileViewState extends State<ProfileMobileView> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Profile Mobile View'),
+        backgroundColor: purple,
+        title: const Text('Profile', style: TextStyle(color: Colors.white)),
+        leading: IconButton(
+          icon: const Icon(Icons.arrow_back, color: Colors.white),
+          onPressed: () => context.go(Routes.home),
+        ),
       ),
-      body: Center(
+      body: const Center(
         child: Text(
-          'This is the mobile view of the profile screen.',
+          'Profile Mobile View',
           style: TextStyle(fontSize: 24, color: Colors.black87),
         ),
       ),
